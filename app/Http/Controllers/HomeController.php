@@ -12,6 +12,7 @@ class HomeController extends Controller
         ->join('endereco_usuarios', 'endereco_usuarios.id_usuario', '=', 'usuarios.id')
         ->join('tipo_usuarios', 'tipo_usuarios.id_usuario', '=', 'usuarios.id')
         ->where('tipo_usuarios.tipo', '=', 'admin')->get();
+
         return view('home.index', ['usuarios_enderecos'=>$usuarios_enderecos]);
     }
 }

@@ -12,4 +12,6 @@
         echo "<br><br>";
     @endphp
 
+        {{ json_encode($usuarios_enderecos)}}
+
 @endforeach
