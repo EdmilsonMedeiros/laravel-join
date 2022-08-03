@@ -1,17 +1,14 @@
-<p>Usuários/Endereço</p>
+<br>Usuários<br>
+@foreach ($usuarios as $usuarios)
+    {{ $usuarios }}
+@endforeach
 
-@foreach ($usuarios_enderecos as $usuarios_enderecos)
-    Nome:
-        {{ $usuarios_enderecos->nome}}
-    @php
-        echo "<br>";
-    @endphp
+<br>Endereços:<br>
+@foreach ($enderecos as $enderecos)
+    {{ $enderecos }}
+@endforeach
 
-        {{ $usuarios_enderecos->cep . ', ' . $usuarios_enderecos->rua. ', ' . $usuarios_enderecos->numero. ', ' . $usuarios_enderecos->bairro. ', ' . $usuarios_enderecos->cidade. ', ' . $usuarios_enderecos->estado}}
-    @php
-        echo "<br><br>";
-    @endphp
-
-        {{ json_encode($usuarios_enderecos)}}
-
+<br>Tipos:<br>
+@foreach($tipos_usuario as $tipos_usuario)
+    <p>{{ $tipos_usuario['tipo']."-".$tipos_usuario['id'] }}</p>
 @endforeach
