@@ -1,14 +1,14 @@
 <br>Usuários<br>
 @foreach ($usuarios as $usuarios)
-    {{ $usuarios }}
+    <p>{{ $usuarios }}</p>
 @endforeach
 
 <br>Endereços:<br>
 @foreach ($enderecos as $enderecos)
-    {{ $enderecos }}
+    <p>{{ $enderecos }}</p>
 @endforeach
 
 <br>Tipos:<br>
 @foreach($tipos_usuario as $tipos_usuario)
-    <p>{{ $tipos_usuario['tipo']."-".$tipos_usuario['id'] }}</p>
+    <p>{{ $tipos_usuario }}</p>
 @endforeach

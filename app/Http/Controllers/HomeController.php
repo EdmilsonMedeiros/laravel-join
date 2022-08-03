@@ -18,8 +18,9 @@ class HomeController extends Controller
         foreach($usuarios_id as $usu_id){
             $usu_id = array();
             $usu_id = $usu_id;
-            $tipos_usuario = TipoUsuario::select('*')->get()
-            ->where('tipo_usuario.id', $usu_id);
+            $tipos_usuario = TipoUsuario::select('*')
+            ->where('tipo_usuarios.tipo', 'admin')->get()
+            ->where('tipo_usuarios.id_usuario', $usu_id);
         }
         return view( 'home.index',
         ['usuarios'=>$usuarios, 'enderecos'=>$enderecos, 'usuarios_id'=>$usuarios_id, 'usuarios_id'=>$usuarios_id
